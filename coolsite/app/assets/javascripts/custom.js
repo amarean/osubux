@@ -1,5 +1,6 @@
-(function($) {
 
+(function($) {
+ 
   // Back to top button
   $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
@@ -139,6 +140,7 @@
 
 
   $(window).resize(function() {
+
 
     var browserWidth = $(window).width();
 
