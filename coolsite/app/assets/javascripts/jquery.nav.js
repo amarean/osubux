@@ -181,7 +181,7 @@
 				});
 			}
 
-			e.preventDefault();
+			//e.preventDefault();
 		},
 		
 		scrollChange: function() {

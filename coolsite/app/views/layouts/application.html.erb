@@ -36,21 +36,136 @@
         </button>
 
         <!-- Logo text or image -->
-        <a class="navbar-brand" href="index.html">Ohio State BYX</a>
+        <a class="navbar-brand" href="/static_pages/home">Ohio State BYX</a>
 
       </div>
       <div class="navigation collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav">
-          <li class="current"><a href="#intro">Home</a></li>
+          <li> <%= link_to "Home", "/static_pages/home" %></li>
           <li><a href="#about">About</a></li>
           <li><a href="#portfolio">Works</a></li>
-          <li><a href="#team">Team</a></li>
-          <li> <%= link_to "Contact", "contact-me" %></li>
+	  <li> <%= link_to "Team", "/static_pages/leaders" %></li>
+          <li> <%= link_to "Contact", "/contact-me" %></li>
         </ul>
       </div>
     </div>
   </nav>
+<!-- intro area -->
+  <div id="intro">
+    <div class="intro-text">
+      <div class="container">
+        <div class="col-md-12">
+          <div id="rotator">
+            <h1><span class="1strotate">Ohio State, Beta Upsilon Chi</span></h1>
+            <div class="line-spacer"></div>
+            <p><span class="2ndrotate">Home of the Bucks, Building Men</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
     <%= yield %>
+ <!-- Bottom widget -->
+  <section id="bottom-widget" class="home-section bg-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="contact-widget wow bounceInLeft">
+            <i class="fa fa-map-marker fa-4x"></i>
+            <h5>Main Campus</h5>
+            <p>
+              109 Borough High Street,<br />London SE1 1NL
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="contact-widget wow bounceInUp">
+            <i class="fa fa-phone fa-4x"></i>
+            <h5>Call</h5>
+            <p>
+              +1 111 9998 7774<br> +1 245 4544 6855
+
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="contact-widget wow bounceInRight">
+            <i class="fa fa-envelope fa-4x"></i>
+            <h5>Email us</h5>
+            <p>
+              .com<br />
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row mar-top30">
+        <div class="col-md-12">
+          <h5>We're on social networks</h5>
+          <ul class="social-network">
+            <li><a href="#">
+						<span class="fa-stack fa-2x">
+							<i class="fa fa-circle fa-stack-2x"></i>
+							<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+						</span></a>
+            </li>
+            <li><a href="#">
+						<span class="fa-stack fa-2x">
+							<i class="fa fa-circle fa-stack-2x"></i>
+							<i class="fa fa-dribbble fa-stack-1x fa-inverse"></i>
+						</span></a>
+            </li>
+            <li><a href="#">
+						<span class="fa-stack fa-2x">
+							<i class="fa fa-circle fa-stack-2x"></i>
+							<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+						</span></a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p>Copyright &copy; Alstar. All rights reserved.</p>
+          <div class="credits">
+            <!--
+              All the links in the footer should remain intact.
+              You can delete the links only if you purchased the pro version.
+              Licensing information: https://bootstrapmade.com/license/
+              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Alstar
+            -->
+            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+
+
+<%= javascript_include_tag "jquery" %>
+<%= javascript_include_tag "jquery.nav" %>
+<%= javascript_include_tag "bootstrap.min" %>
+<%= javascript_include_tag "wow.min" %>
+
+<%= javascript_include_tag "mb.bgndGallery" %>
+<%= javascript_include_tag "mb.bgndGallery.effects" %>
+<%= javascript_include_tag "jquery.simple-text-rotator.min" %>
+
+<%= javascript_include_tag "jquery.scrollTo.min" %>
+<%= javascript_include_tag "modernizr.custom" %>
+
+<%= javascript_include_tag "stellar" %>
+<%= javascript_include_tag "contactform" %>
+<%= javascript_include_tag "custom" %>
   </body>
 </html>

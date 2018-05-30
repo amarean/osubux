@@ -1,9 +1,50 @@
-<%= form_for @message, url: create_message_url do |f| %>
-  <%= notice %>
-  <%= @message.errors.full_messages.join(', ') %>
+<!-- Formating from Bootsnip-->
 
-  <%= f.text_field :name, placeholder: 'name' %>
-  <%= f.email_field :email, placeholder: 'email' %>
-  <%= f.text_area :body, placeholder: 'body' %>
-  <%= f.submit 'Send' %>
-<% end %>
+	<div class="bg-contact2" style="background-image: url('images/bg-01.jpg');">
+		<div class="container-contact2">
+			<div class="wrap-contact2">
+				<form class="contact2-form validate-form">
+					<div class= "contact2-form-title">
+					<label for "contact">
+						Contact Us
+					</label>
+					<%= form_for @message, url: create_message_url do |f| %>
+  							<%= notice %>
+ 							 <%= @message.errors.full_messages.join(', ') %>
+
+					<div class="wrap-input2 validate-input" data-validate="Name is required">
+						<span class="focus-input2" data-placeholder="NAME" style ></span></br></br>
+						<div class = "input2">
+						 <%= f.text_field :name %>
+						</div>
+					
+						
+
+					</div>
+
+					<div class="wrap-input2 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<span class="focus-input2" data-placeholder="EMAIL"></span></br></br>
+						<div class = "input2">
+						  <%= f.email_field :email, placeholder: 'email' %>
+						</div>
+						
+					</div>
+
+					<div class="wrap-input2 validate-input" data-validate = "Message is required">
+						<div class = "input2">
+						 <%= f.text_area :body, placeholder: 'body' %>
+						</div>
+						<span class="focus-input2" data-placeholder="MESSAGE"></span>
+					</div>
+
+					<div class="container-contact2-form-btn">
+						<div class="wrap-contact2-form-btn">
+							<div class="contact2-form-bgbtn"></div>
+								 <%= f.submit "Send" %>
+								 <% end %>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
