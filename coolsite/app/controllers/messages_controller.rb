@@ -6,13 +6,15 @@ class MessagesController < ApplicationController
 	  def create
     		@message = Message.new(message_params)
 
+		respond_to do |format|
    		 if @message.valid?
     		  MessageMailer.contact_me(@message).deliver_now
-    		  redirect_to new_message_url, notice: "Message received"
+    		  format.html{redirect_to new_message_url, notice: "Message received"}
    		 else
-   		   render :new
+   		   format.html{render :new}
    		 end
-  		end
+		end
+	end
   
 def message_params
     params.require(:message).permit(:name, :email, :body)

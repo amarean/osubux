@@ -7,7 +7,8 @@ class MessageMailer < ApplicationMailer
   #
  
   def contact_me(message)
-   @body = message.body
+   @body = message.name + "\t / \t" + message.email + "\t / \t" + message.body
+   
    mail to: "ariana.marean@gmail.com", from: message.email
   end
  
